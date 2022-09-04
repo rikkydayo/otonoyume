@@ -18,7 +18,7 @@ export default function Layout({ children, title = "HP by ZAQ" }) {
             <div className="flex space-x-4">
               <Link href="/">
                 <a className="text-gray-300 text-base px-3 py-2 p-2">
-                  ウタノユメ -つらつら音楽ブログ-
+                  ウタノユメ -つらつら音楽-
                 </a>
               </Link>
               <Link href="/contact-page">
