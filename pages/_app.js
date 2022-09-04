@@ -1,6 +1,6 @@
 import '../styles/globals.css'
 import 'tailwindcss/tailwind.css'
-import usePageView from '../src/hooks/usePageView'
+import usePageView from '../hooks/usePageView'
 
 
 function MyApp({ Component, pageProps }) {
