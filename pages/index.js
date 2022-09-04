@@ -5,7 +5,7 @@ import Link from "next/link";
 export default function Home({ blogs }) {
   return (
     <Layout title="ウタノユメ -つらつら音楽ブログ-">
-      <div className="max-w-md mx-auto grid gap-6 lg:grid-cols-3 lg:max-w-7xl">
+      <div className="max-w-md mx-auto grid gap-6 lg:grid-cols-3 lg:max-w-7xl mt-auto">
           {blogs.map((blog) => (
             <a
               key={blog.id}
