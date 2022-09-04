@@ -17,7 +17,7 @@ const Contact = () => {
         </div>
         <div className="mt-4">
           <p className="font-bold">Address</p>
-          <p className="text-xs mt-2 text-gray-600">rickyshaun1230@gmail.com</p>
+          <p className="text-xs mt-2 text-gray-600">ongaku.de.ikiteru1853@gmail.com</p>
         </div>
         <div className="mt-6 flex justify-around">
           <a
