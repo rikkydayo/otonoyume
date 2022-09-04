@@ -150,7 +150,7 @@
 .post {
   margin-left: 10px;
   margin-right: 10px;
-
+  justify-content: center;
   & > h1 {
     font-size: 30px;
     font-weight: bold;
@@ -166,6 +166,7 @@
     margin: 40px 0 16px;
     border-bottom: 1px solid #ddd;
     padding-bottom: 10px;
+    line-height: normal;
   }
 
   & > p {
@@ -173,8 +174,15 @@
     letter-spacing: 0.2px;
     font-weight:600;
     font-family: -apple-system,BlinkMacSystemFont,Helvetica Neue,Segoe UI,Hiragino Kaku Gothic ProN,Hiragino Sans,ヒラギノ角ゴ ProN W3,Arial,メイリオ,Meiryo,sans-serif;
+    & > img {
+      width: 85%;
+    }
+  }
+  & > iframe {
+    width: 100%;
   }
 
+  
   & > ol {
     list-style-type: decimal;
     list-style-position: inside;

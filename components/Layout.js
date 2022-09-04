@@ -4,7 +4,7 @@ import Image from "next/dist/client/image";
 
 export default function Layout({ children, title = "HP by ZAQ" }) {
   return (
-    <div className="flex justify-center items-center flex-col min-h-screen text-gray-600 text-sm font-mono">
+    <div className="flex justify-center items-center flex-col min-h-screen text-gray-600 text-sm font-mono  min-w-full">
       <Head>
         <link
           href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
@@ -33,7 +33,7 @@ export default function Layout({ children, title = "HP by ZAQ" }) {
       <main className="flex flex-1 justify-center items-center flex-col w-screen">
         {children}
       </main>
-      <footer className="w-full h-12 flex justify-center items-center border-t">
+      <footer className="w-screen h-12 flex justify-center items-center border-t">
         <a
           href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
           target="_blank"
