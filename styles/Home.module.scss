@@ -188,19 +188,32 @@
     list-style-position: inside;
   }
 
-  & > blockquote {
+  blockquote {
+    font-weight:600;
     position: relative;
+    padding: 35px 15px 10px 15px;
+    box-sizing: border-box;
+    font-style: italic;
+    background: #f5f5f5;
+    color: #777777;
+    border-left: 4px solid #9dd4ff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.14);
     font-family: -apple-system,BlinkMacSystemFont,Helvetica Neue,Segoe UI,Hiragino Kaku Gothic ProN,Hiragino Sans,ヒラギノ角ゴ ProN W3,Arial,メイリオ,Meiryo,sans-serif;
-    border-left: 3px solid hsl(347, 21%, 13%);
-    padding-left: 10px;
-  }
-  & > blockquote:before {
+}
+
+blockquote:before{
+    display: inline-block;
     position: absolute;
-    font-family: "FontAwesome";
+    top: 10px;
+    left: 15px;
     content: "\f10d";
-    font-size: 20px;
-    color: #281b1d;
-  }
+    font-family: FontAwesome;
+    color: #9dd4ff;
+    font-size: 28px;
+    line-height: 1;
+    font-weight: 900;
+}
+
   & > blockquote span {
     position: relative;
     padding-left: 30px;
