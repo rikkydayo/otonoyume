@@ -9,7 +9,7 @@ const Contact = () => {
         <div className="flex justify-center mt-4">
           <Image
             className="rounded-full"
-            src="/DSC05678.jpg"
+            src="/DSC08130.jpg"
             width={60}
             height={60}
             alt="Avater"
