@@ -16,12 +16,9 @@ export default function Layout({ children, title = "HP by ZAQ" }) {
         <nav className="bg-gray-800 w-screen">
           <div className="flex items-center pl-8 h-14">
             <div className="flex space-x-4">
-              <a className="text-gray-300 text-base px-3 py-2 p-2">
-                ウタノユメ
-              </a>
               <Link href="/">
-                <a className="text-gray-300 hover:bg-gray-700 px-3 py-2 rounded">
-                  Home
+                <a className="text-gray-300 text-base px-3 py-2 p-2">
+                  ウタノユメ -つらつら音楽ブログ-
                 </a>
               </Link>
               <Link href="/contact-page">
