@@ -1,6 +1,7 @@
 import Head from "next/head";
 import Link from "next/link";
 import Image from "next/dist/client/image";
+import GoogleAnalytics from "./GoogleAnalytics";
 
 export default function Layout({ children, title = "HP by ZAQ" }) {
   return (
