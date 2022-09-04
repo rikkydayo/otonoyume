@@ -10,6 +10,7 @@ export default function Layout({ children, title = "HP by ZAQ" }) {
           href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
           rel="stylesheet"
         />
+        <GoogleAnalytics />
         <title>{title}</title>
       </Head>
       <header>
