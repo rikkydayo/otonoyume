@@ -1,7 +1,6 @@
 import Head from "next/head";
 import Link from "next/link";
 import Image from "next/dist/client/image";
-import GoogleAnalytics from "./GoogleAnalytics";
 
 export default function Layout({ children, title = "HP by ZAQ" }) {
   return (
@@ -11,7 +10,6 @@ export default function Layout({ children, title = "HP by ZAQ" }) {
           href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
           rel="stylesheet"
         />
-        <GoogleAnalytics />
         <title>{title}</title>
       </Head>
       <header>
