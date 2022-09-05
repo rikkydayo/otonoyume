@@ -6,6 +6,10 @@ export default class MyDocument extends Document {
     return (
       <Html lang="ja">
         <Head>
+          <link
+            href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+            rel="stylesheet"
+          />
           {/* Global Site Tag (gtag.js) - Google Analytics */}
           <script
             async

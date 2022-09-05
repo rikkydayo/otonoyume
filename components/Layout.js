@@ -6,10 +6,6 @@ export default function Layout({ children, title = "HP by ZAQ" }) {
   return (
     <div className="flex justify-center items-center flex-col min-h-screen text-gray-600 text-sm font-mono  min-w-full">
       <Head>
-        <link
-          href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
-          rel="stylesheet"
-        />
         <title>{title}</title>
       </Head>
       <header>

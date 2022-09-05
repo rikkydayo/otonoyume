@@ -4,11 +4,14 @@ import styles from "../../styles/Home.module.scss";
 import dayjs from 'dayjs'
 import utc from 'dayjs/plugin/utc'
 import timezone from 'dayjs/plugin/timezone'
+import { TableOfContents } from '../../components/TableOfContents';
+import { renderToc } from '../../libs/render-toc';
 
 export default function BlogId({ blog }) {
   dayjs.extend(utc);
   dayjs.extend(timezone);
   const publishedAt = "作成日 : " + dayjs.utc(blog.publishedAt).tz('Asia/Tokyo').format('YYYY-MM-DD');
+  const toc = renderToc(blog.content);
   return (
     <Layout title={blog.title}>
       <h3 className={styles.title}>{blog.title}</h3>
@@ -21,6 +24,7 @@ export default function BlogId({ blog }) {
         width="640" height="480"
       />
       <p className={styles.publishedAt}>{publishedAt}</p>
+      <TableOfContents toc={toc} />
       <div
         dangerouslySetInnerHTML={{
           __html: `${blog.content}`,

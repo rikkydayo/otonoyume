@@ -207,12 +207,12 @@ blockquote:before{
     position: absolute;
     top: 10px;
     left: 15px;
-    content: "\f10d";
-    font-family: FontAwesome;
+    content:'“';
     color: #9dd4ff;
     font-size: 28px;
     line-height: 1;
     font-weight: 900;
+    font-family: -apple-system,BlinkMacSystemFont,Helvetica Neue,Segoe UI,Hiragino Kaku Gothic ProN,Hiragino Sans,ヒラギノ角ゴ ProN W3,Arial,メイリオ,Meiryo,sans-serif;
 }
 
   & > blockquote span {
@@ -225,4 +225,26 @@ blockquote:before{
     color: #281b1d;
     text-align: right;
   }
+}
+.l_toc {
+  background: #fcfcfc;/*背景色*/
+  padding: 0.5em 0.5em 0.5em 2em;/*ボックス内の余白*/
+  border: solid 3px rgb(12, 14, 51);/*線の種類 太さ 色*/
+}
+
+.l_toc ul {
+  list-style-type: circle ;
+}
+
+.l_toc p {
+  font-weight: 1000;
+  font-size: medium;
+  font-family: -apple-system,BlinkMacSystemFont,Helvetica Neue,Segoe UI,Hiragino Kaku Gothic ProN,Hiragino Sans,ヒラギノ角ゴ ProN W3,Arial,メイリオ,Meiryo,sans-serif;
+}
+
+.l_toc li {
+  line-height: 1.5; /*文の行高*/
+  padding: 0.5em 0; /*前後の文との余白*/
+  font-weight: 900;
+  font-family: -apple-system,BlinkMacSystemFont,Helvetica Neue,Segoe UI,Hiragino Kaku Gothic ProN,Hiragino Sans,ヒラギノ角ゴ ProN W3,Arial,メイリオ,Meiryo,sans-serif;
 }
