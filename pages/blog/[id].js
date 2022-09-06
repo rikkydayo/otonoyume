@@ -6,6 +6,7 @@ import utc from 'dayjs/plugin/utc'
 import timezone from 'dayjs/plugin/timezone'
 import { TableOfContents } from '../../components/TableOfContents';
 import { renderToc } from '../../libs/render-toc';
+import { Share } from "../../components/Share";
 
 export default function BlogId({ blog }) {
   dayjs.extend(utc);
@@ -31,6 +32,7 @@ export default function BlogId({ blog }) {
         }}
         className={styles.post}
       ></div>
+      <Share text={blog.title} url={`https://utanoyume.com/blog/${blog.id}`} ></Share>
     </Layout>
   );
 }
