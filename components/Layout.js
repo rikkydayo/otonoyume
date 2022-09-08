@@ -1,13 +1,19 @@
 import Head from "next/head";
 import Link from "next/link";
 import Image from "next/dist/client/image";
+import Header from "./Head";
+import BlogId from "../pages/blog/[id]";
 
-export default function Layout({ children, title = "HP by ZAQ" }) {
+export default function Layout({ children, title, url, image }) {
   return (
     <div className="flex justify-center items-center flex-col min-h-screen text-gray-600 text-sm font-mono  min-w-full">
-      <Head>
-        <title>{title}</title>
-      </Head>
+      <Header
+        pageTitle={title}
+        pageImg={image}
+        pageImgWidth={1280}
+        pageImgHeight={960}
+        pagePath={url}
+      />
       <header>
         <nav className="bg-gray-800 w-screen">
           <div className="flex items-center pl-8 h-14">

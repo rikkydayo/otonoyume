@@ -14,7 +14,7 @@ export default function BlogId({ blog }) {
   const publishedAt = "作成日 : " + dayjs.utc(blog.publishedAt).tz('Asia/Tokyo').format('YYYY-MM-DD');
   const toc = renderToc(blog.content);
   return (
-    <Layout title={blog.title}>
+    <Layout title={blog.title} url={`https://utanoyume.com/blog/${blog.id}`}  image={blog.eyecatch.url}>
       <h3 className={styles.title}>{blog.title}</h3>
       <img
         className="mt-6 rounded-lg shadow-xl"
