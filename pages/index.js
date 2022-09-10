@@ -23,7 +23,7 @@ export default function Home({ blogs, totalCount }) {
                 </div>
                 <div className="flex-shrink-0">
                   <img
-                    className="h-48 w-full object-cover sm:h-80"
+                    className="h-80 w-full object-cover sm:h-80"
                     src={blog.eyecatch.url}
                     alt={blog.title}
                     decoding="async"
