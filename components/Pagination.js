@@ -26,11 +26,11 @@ export const Pagination = ({ maxPageNumber, currentPageNumber }) => {
                 fill="none"
                 viewBox="0 0 24 24"
                 stroke="currentColor"
-                stroke-width="2"
+                strokeWidth="2"
               >
                 <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
                   d="M11 19l-7-7 7-7m8 14l-7-7 7-7"
                 />
               </svg>
@@ -101,11 +101,11 @@ export const Pagination = ({ maxPageNumber, currentPageNumber }) => {
                 fill="none"
                 viewBox="0 0 24 24"
                 stroke="currentColor"
-                stroke-width="2"
+                strokeWidth="2"
               >
                 <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
                   d="M13 5l7 7-7 7M5 5l7 7-7 7"
                 />
               </svg>
