@@ -14,7 +14,7 @@ export const CommentsField = ({blogId}) => {
     console.log(data);
     const result = window.confirm("送信しますか？");
     if (result) {
-      addComments(data.content,userName=data.name,blogId=blogId);
+      addComments(data.content,data.name,blogId);
     }
   };
   return (
