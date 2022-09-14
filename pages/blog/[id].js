@@ -33,8 +33,9 @@ export default function BlogId({ blog }) {
         }}
         className={styles.post}
       ></div>
-      <Share text={blog.title} url={`https://utanoyume.com/blog/${blog.id}`} ></Share>
+      
       <CommentsField blogId={blog.id}/>
+      <Share text={blog.title} url={`https://utanoyume.com/blog/${blog.id}`} ></Share>
     </Layout>
   );
 }
