@@ -32,7 +32,6 @@ export const CommentsField = ({ blogId }) => {
     const result = window.confirm("送信しますか？");
     if (result) {
       addComments(data.name, data.content, blogId);
-      document.location.reload();
     }
   };
   return (

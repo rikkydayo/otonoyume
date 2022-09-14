@@ -21,6 +21,5 @@ export async function addComments(user_name, body, blog_id) {
   if (error && status !== 406) {
     throw error;
   }
-  console.log(data);
   return data;
 }
