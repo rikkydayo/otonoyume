@@ -4,6 +4,7 @@ import { ErrorMessage } from "@hookform/error-message";
 import { supabase } from "../libs/supabase";
 import { useLayoutEffect, useState } from "react";
 import styles from "../styles/Home.module.scss";
+import { resolve } from "styled-jsx/css";
 
 export const CommentsField = ({ blogId }) => {
   const {
@@ -27,13 +28,16 @@ export const CommentsField = ({ blogId }) => {
     };
     comment();
   }, []);
-
+  const sleep = waitTime => new Promise(resolve => setTimeout(resolve,waitTime))
+  const reloadFunc = async function () {
+      await sleep(1000)
+      window.location.reload()
+  }
   const onSubmit = (data) => {
     const result = window.confirm("送信しますか？");
     if (result) {
       addComments(data.name, data.content, blogId);
-      window.alert("送信しました。")
-      window.location.reload()
+      reloadFunc();
     }
   };
   return (
