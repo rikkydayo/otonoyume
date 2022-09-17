@@ -44,8 +44,7 @@ export const CommentsField = ({ blogId}) => {
   const onSubmit = (data) => {
     const result = window.confirm("送信しますか？");
     if (result) {
-      sendLine(`${blogId}にコメントがきたよ！
-      ${data.content}`);
+      sendLine(`${blogId}にコメントがきたよ！${data.content}`);
       // addComments(data.name, data.content, blogId);
       // reloadFunc();
     }
