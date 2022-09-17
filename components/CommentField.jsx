@@ -36,8 +36,10 @@ export const CommentsField = ({ blogId , blogTitle}) => {
   }
   const sendLine = async (content) => {
     const text = `${content}`
-    const response = await fetch(`http://localhost:3000/api/${text}`);
+    const response = await fetch(`/api/${text}`);
+   
     const data = await response.json();
+    console.log(data)
   };
 
   const onSubmit = (data) => {
