@@ -46,8 +46,8 @@ export const CommentsField = ({ blogId , blogTitle}) => {
     if (result) {
       sendLine(`${blogTitle}にコメントがきたよ！
       ${data.content}`);
-      addComments(data.name, data.content, blogId);
-      reloadFunc();
+      // addComments(data.name, data.content, blogId);
+      // reloadFunc();
     }
   };
   return (
