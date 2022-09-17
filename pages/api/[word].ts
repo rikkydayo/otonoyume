@@ -10,7 +10,6 @@ const config = {
 const client = new line.Client(config);
 
 export default ({ query: { word } }: { query: { word: string } }, res: NextApiResponse) => {
-  console.log(client)
   client.broadcast({
     type: "text",
     text: word
