@@ -6,6 +6,7 @@ import { useState ,useEffect} from "react";
 import styles from "../styles/Home.module.scss";
 
 export const CommentsField = ({ blogId , blogTitle}) => {
+
   const {
     register, //inputなどに入力された値を参照するために使う
     handleSubmit,
@@ -32,14 +33,14 @@ export const CommentsField = ({ blogId , blogTitle}) => {
   
   const reloadFunc = async function () {
       await sleep(1000)
-      window.location.reload()
+      // window.location.reload()
   }
   const sendLine = async (content) => {
     const text = `${content}`
-    const response = await fetch(`/api/${text}`);
-   
-    const data = await response.json();
+    const response = await fetch(`https://utanoyume.com/api/${text}`);
     console.log(data)
+    const data = await response.json();
+    
   };
 
   const onSubmit = (data) => {
