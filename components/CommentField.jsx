@@ -1,20 +1,19 @@
-import { addComments, getComments } from "../libs/comment";
+import { addComments } from "../libs/comment";
 import { useForm } from "react-hook-form"; // SubmitHandlerは、submitイベントに関する関数の型宣言に使う
 import { ErrorMessage } from "@hookform/error-message";
 import { supabase } from "../libs/supabase";
-import { useLayoutEffect, useState } from "react";
+import { useState ,useEffect} from "react";
 import styles from "../styles/Home.module.scss";
-import { resolve } from "styled-jsx/css";
 
-export const CommentsField = ({ blogId }) => {
+export const CommentsField = ({ blogId , blogTitle}) => {
   const {
     register, //inputなどに入力された値を参照するために使う
     handleSubmit,
-    formState: { errors, isValid },
+    formState: { errors,},
   } = useForm();
 
   const [state, setState] = useState([]);
-  useLayoutEffect(() => {
+  useEffect(() => {
     const comment = async () => {
       const { data, error, status } = await supabase
         .from("comment_tbl")
@@ -28,14 +27,25 @@ export const CommentsField = ({ blogId }) => {
     };
     comment();
   }, []);
+  
   const sleep = waitTime => new Promise(resolve => setTimeout(resolve,waitTime))
+  
   const reloadFunc = async function () {
       await sleep(1000)
       window.location.reload()
   }
+  const sendLine = async (content) => {
+    const text = `${content}`
+    const response = await fetch(`http://localhost:3000/api/${text}`);
+    const data = await response.json();
+  };
+
   const onSubmit = (data) => {
     const result = window.confirm("送信しますか？");
     if (result) {
+
+      sendLine(`${blogTitle}にコメントがきたよ！
+      ${data.content}`);
       addComments(data.name, data.content, blogId);
       reloadFunc();
     }

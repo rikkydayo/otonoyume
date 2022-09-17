@@ -34,7 +34,7 @@ export default function BlogId({ blog }) {
         className={styles.post}
       ></div>
       
-      <CommentsField blogId={blog.id}/>
+      <CommentsField blogId={blog.id} blogTitle={blog.title}/>
       <Share text={blog.title} url={`https://utanoyume.com/blog/${blog.id}`} ></Share>
     </Layout>
   );
@@ -45,7 +45,7 @@ export const getStaticPaths = async () => {
     endpoint: "blogs",
   });
   const paths = data.contents.map((content) => `/blog/${content.id}`);
-  return { paths, fallback: false };
+  return { paths, fallback: 'blocking' };
 };
 
 export const getStaticProps = async (context) => {
