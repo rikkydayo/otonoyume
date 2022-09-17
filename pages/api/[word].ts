@@ -16,21 +16,9 @@ export default (
   client
     .broadcast({
       type: "text",
-      text:"コメントがきたよ",
-    })
-    .then((data) => console.log(data))
-    .catch((e) => console.log(e));
-  client
-    .broadcast({
-      type: "text",
       text: word,
     })
     .then((data) => console.log(data))
     .catch((e) => console.log(e));
-    client.broadcast({
-      type: "text",
-      text: word
-    }).then(data => console.log(data))
-      .catch(e => console.log(e))
   res.status(200).json({ message: `you requested for ${word} ` });
 };
