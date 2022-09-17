@@ -38,9 +38,9 @@ export const CommentsField = ({ blogId , blogTitle}) => {
   const sendLine = async (content) => {
     const text = `${content}`
     const response = await fetch(`https://utanoyume.com/api/${text}`);
-    console.log(data)
+  
     const data = await response.json();
-    
+    console.log(data)
   };
 
   const onSubmit = (data) => {
