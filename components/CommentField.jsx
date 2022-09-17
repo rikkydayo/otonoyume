@@ -33,7 +33,7 @@ export const CommentsField = ({ blogId , blogTitle}) => {
   
   const reloadFunc = async function () {
       await sleep(1000)
-       window.location.reload()
+      window.location.reload()
   }
   const sendLine = async (content) => {
     const text = `${content}`
@@ -44,7 +44,6 @@ export const CommentsField = ({ blogId , blogTitle}) => {
   const onSubmit = (data) => {
     const result = window.confirm("送信しますか？");
     if (result) {
-
       sendLine(`${blogTitle}にコメントがきたよ！
       ${data.content}`);
       addComments(data.name, data.content, blogId);
