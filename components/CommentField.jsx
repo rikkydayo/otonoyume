@@ -5,7 +5,7 @@ import { supabase } from "../libs/supabase";
 import { useState ,useEffect} from "react";
 import styles from "../styles/Home.module.scss";
 
-export const CommentsField = ({ blogId , blogTitle}) => {
+export const CommentsField = ({ blogId}) => {
 
   const {
     register, //inputなどに入力された値を参照するために使う
@@ -37,17 +37,17 @@ export const CommentsField = ({ blogId , blogTitle}) => {
   }
   const sendLine = async (content) => {
     const text = `${content}`
-    const response = await fetch(`https://utanoyume.com/api/${text}`);
+    const response = await fetch(`http://localhost:3000/api/${text}`);
     const data = await response.json();
   };
 
   const onSubmit = (data) => {
     const result = window.confirm("送信しますか？");
     if (result) {
-      sendLine(`${blogTitle}にコメントがきたよ！
+      sendLine(`${blogId}にコメントがきたよ！
       ${data.content}`);
-      // addComments(data.name, data.content, blogId);
-      // reloadFunc();
+      addComments(data.name, data.content, blogId);
+      reloadFunc();
     }
   };
   return (
