@@ -39,14 +39,15 @@ export const CommentsField = ({ blogId}) => {
     const text = `${content}`
     const response = await fetch(`/api/${text}`);
     const data = await response.json();
+    console.log(data)
   };
 
   const onSubmit = (data) => {
     const result = window.confirm("送信しますか？");
     if (result) {
       sendLine(`${blogId}にコメントがきたよ！${data.content}`);
-      addComments(data.name, data.content, blogId);
-      reloadFunc();
+      // addComments(data.name, data.content, blogId);
+      // reloadFunc();
     }
   };
   return (
