@@ -12,7 +12,6 @@ export default (
   { query: { word } }: { query: { word: string } },
   res: NextApiResponse
 ) => {
-  console.log(client);
   client
     .broadcast({
       type: "text",
