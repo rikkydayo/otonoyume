@@ -2,8 +2,13 @@ import Layout from "../components/Layout";
 import { client } from "../libs/client";
 import Link from "next/link";
 import { Pagination } from "../components/Pagination";
+import dayjs from "dayjs";
+import utc from "dayjs/plugin/utc";
+import timezone from "dayjs/plugin/timezone";
 
 export default function Home({ blogs, totalCount }) {
+  dayjs.extend(utc);
+  dayjs.extend(timezone);
   return (
     <Layout title="トップページ" url="https://utanoyume.com/">
       <div className="max-w-md mx-auto grid gap-6 lg:grid-cols-3 lg:max-w-7xl mt-auto mt-5">
@@ -19,6 +24,12 @@ export default function Home({ blogs, totalCount }) {
                     <h3 className="text-xl font-bold text-gray-900">
                       {blog.title}
                     </h3>
+                    <h2 className="text-xs font-bold text-gray-900">
+                      {dayjs
+                        .utc(blog.publishedAt)
+                        .tz("Asia/Tokyo")
+                        .format("YYYY-MM-DD")}
+                    </h2>
                   </div>
                 </div>
                 <div className="flex-shrink-0">
