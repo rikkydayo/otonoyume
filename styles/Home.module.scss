@@ -319,3 +319,22 @@ blockquote:before{
   margin: 0; 
   padding: 0;
 }
+
+.ranking {
+  counter-reset: rank;
+}
+
+ 
+.ranking rank::before { /* ラベルと順位のスタイル */
+  counter-increment: rank;
+  content: counter(rank) " 位";
+  position: absolute;
+  padding: 8px 14px;
+  font-size: 1.2em;
+  color: #fff; /* 文字色 */
+  background: rgba(0,0,0,0.8); /* 背景色 */
+}
+ 
+.ranking img { /* 画像のスタイル */
+  object-fit: cover;
+}
