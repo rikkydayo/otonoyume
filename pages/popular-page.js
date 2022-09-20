@@ -18,9 +18,8 @@ export default function Home({ blogs }) {
       <ranktop className={styles.ranking}>
         <div className="max-w-md mx-auto grid gap-6 lg:grid-cols-3 lg:max-w-7xl mt-auto mt-5">
           {blogs.map((blog) => (
-            <rank>
+            <rank key={blog.id}>
               <a
-                key={blog.id}
                 className="flex flex-col rounded-lg bg-white overflow-hidden hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-indigo-600"
               >
                 <Link href={`/blog/${blog.id}`}>
