@@ -12,8 +12,8 @@ export default function Home({ blogs }) {
 
   return (
     <Layout title="トップページ" url="https://utanoyume.com/">
-      <div class="container mx-auto my-4 px-4">
-        <h2 class="text-xl text-gray-800 flex justify-center ">1か月のランキングを表示しています。</h2>
+      <div className="container mx-auto my-4 px-4">
+        <h2 className="text-xl text-gray-800 flex justify-center ">1か月のランキングを表示しています。</h2>
       </div>
       <ranktop className={styles.ranking}>
         <div className="max-w-md mx-auto grid gap-6 lg:grid-cols-3 lg:max-w-7xl mt-auto mt-5">
