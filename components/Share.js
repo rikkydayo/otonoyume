@@ -4,7 +4,7 @@ import { FacebookIcon, FacebookShareButton, TwitterIcon, TwitterShareButton ,Lin
 
 export const Share = ({ text, url }) => {
   return (
-    <ul className="flex justify-center list-none">
+    <ul className="flex justify-center list-none py-2">
       <li className="mr-8">
         <TwitterShareButton url={url} title={text}>
           <TwitterIcon size={32} round={true} />

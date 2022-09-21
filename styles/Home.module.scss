@@ -137,14 +137,16 @@
   /*線の種類（二重線）太さ 色*/
   border-bottom: double 5px #25231f;
   font-size: 1.875rem;
-  line-height:2.25rem;
+  line-height: 2.25rem;
   width: 80%;
   margin-top: 20px;
 }
 
 .publishedAt {
   margin-bottom: 40px;
-  font-family: -apple-system,BlinkMacSystemFont,Helvetica Neue,Segoe UI,Hiragino Kaku Gothic ProN,Hiragino Sans,ヒラギノ角ゴ ProN W3,Arial,メイリオ,Meiryo,sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, Helvetica Neue, Segoe UI,
+    Hiragino Kaku Gothic ProN, Hiragino Sans, ヒラギノ角ゴ ProN W3, Arial,
+    メイリオ, Meiryo, sans-serif;
 }
 
 .post {
@@ -172,8 +174,10 @@
   & > p {
     line-height: 1.8;
     letter-spacing: 0.2px;
-    font-weight:600;
-    font-family: -apple-system,BlinkMacSystemFont,Helvetica Neue,Segoe UI,Hiragino Kaku Gothic ProN,Hiragino Sans,ヒラギノ角ゴ ProN W3,Arial,メイリオ,Meiryo,sans-serif;
+    font-weight: 600;
+    font-family: -apple-system, BlinkMacSystemFont, Helvetica Neue, Segoe UI,
+      Hiragino Kaku Gothic ProN, Hiragino Sans, ヒラギノ角ゴ ProN W3, Arial,
+      メイリオ, Meiryo, sans-serif;
     & > img {
       width: 85%;
     }
@@ -182,14 +186,13 @@
     width: 100%;
   }
 
-  
   & > ol {
     list-style-type: decimal;
     list-style-position: inside;
   }
 
   blockquote {
-    font-weight:600;
+    font-weight: 600;
     position: relative;
     padding-left: 30px;
     padding: 35px 15px 10px 15px;
@@ -199,21 +202,25 @@
     color: #000000;
     border-left: 4px solid #9dd4ff;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.14);
-    font-family: -apple-system,BlinkMacSystemFont,Helvetica Neue,Segoe UI,Hiragino Kaku Gothic ProN,Hiragino Sans,ヒラギノ角ゴ ProN W3,Arial,メイリオ,Meiryo,sans-serif;
-}
+    font-family: -apple-system, BlinkMacSystemFont, Helvetica Neue, Segoe UI,
+      Hiragino Kaku Gothic ProN, Hiragino Sans, ヒラギノ角ゴ ProN W3, Arial,
+      メイリオ, Meiryo, sans-serif;
+  }
 
-blockquote:before{
+  blockquote:before {
     display: inline-block;
     position: absolute;
     top: 10px;
     left: 15px;
-    content:'“';
+    content: "“";
     color: #9dd4ff;
     font-size: 28px;
     line-height: 1;
     font-weight: 900;
-    font-family: -apple-system,BlinkMacSystemFont,Helvetica Neue,Segoe UI,Hiragino Kaku Gothic ProN,Hiragino Sans,ヒラギノ角ゴ ProN W3,Arial,メイリオ,Meiryo,sans-serif;
-}
+    font-family: -apple-system, BlinkMacSystemFont, Helvetica Neue, Segoe UI,
+      Hiragino Kaku Gothic ProN, Hiragino Sans, ヒラギノ角ゴ ProN W3, Arial,
+      メイリオ, Meiryo, sans-serif;
+  }
 
   & > blockquote span {
     position: relative;
@@ -227,26 +234,30 @@ blockquote:before{
   }
 }
 .l_toc {
-  background: #fcfcfc;/*背景色*/
-  padding: 0.5em 0.5em 0.5em 2em;/*ボックス内の余白*/
-  border: solid 3px rgb(12, 14, 51);/*線の種類 太さ 色*/
+  background: #fcfcfc; /*背景色*/
+  padding: 0.5em 0.5em 0.5em 2em; /*ボックス内の余白*/
+  border: solid 3px rgb(12, 14, 51); /*線の種類 太さ 色*/
 }
 
 .l_toc ul {
-  list-style-type: circle ;
+  list-style-type: circle;
 }
 
 .l_toc p {
   font-weight: 1000;
   font-size: medium;
-  font-family: -apple-system,BlinkMacSystemFont,Helvetica Neue,Segoe UI,Hiragino Kaku Gothic ProN,Hiragino Sans,ヒラギノ角ゴ ProN W3,Arial,メイリオ,Meiryo,sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, Helvetica Neue, Segoe UI,
+    Hiragino Kaku Gothic ProN, Hiragino Sans, ヒラギノ角ゴ ProN W3, Arial,
+    メイリオ, Meiryo, sans-serif;
 }
 
 .l_toc li {
   line-height: 1.5; /*文の行高*/
   padding: 0.5em 0; /*前後の文との余白*/
   font-weight: 900;
-  font-family: -apple-system,BlinkMacSystemFont,Helvetica Neue,Segoe UI,Hiragino Kaku Gothic ProN,Hiragino Sans,ヒラギノ角ゴ ProN W3,Arial,メイリオ,Meiryo,sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, Helvetica Neue, Segoe UI,
+    Hiragino Kaku Gothic ProN, Hiragino Sans, ヒラギノ角ゴ ProN W3, Arial,
+    メイリオ, Meiryo, sans-serif;
 }
 
 .Pagination {
@@ -294,7 +305,7 @@ blockquote:before{
   border-radius: 30px;
 }
 
-.balloon:before {  
+.balloon:before {
   content: "";
   position: absolute;
   left: -38px;
@@ -316,7 +327,7 @@ blockquote:before{
   border-radius: 50%;
 }
 .balloon p {
-  margin: 0; 
+  margin: 0;
   padding: 0;
 }
 
@@ -324,17 +335,80 @@ blockquote:before{
   counter-reset: rank;
 }
 
- 
-.ranking rank::before { /* ラベルと順位のスタイル */
+.ranking rank::before {
+  /* ラベルと順位のスタイル */
   counter-increment: rank;
   content: counter(rank) " 位";
   position: absolute;
   padding: 8px 14px;
   font-size: 1.2em;
   color: #fff; /* 文字色 */
-  background: rgba(0,0,0,0.8); /* 背景色 */
+  background: rgba(0, 0, 0, 0.8); /* 背景色 */
 }
- 
-.ranking img { /* 画像のスタイル */
+
+.ranking img {
+  /* 画像のスタイル */
   object-fit: cover;
+}
+
+.prev-next-link a {
+  border-bottom: 1px #ddd solid;
+  display: block;
+  text-decoration: none;
+  padding: 14px 40px;
+  color: #0bd;
+}
+.prev-next-link a:hover {
+  background-color: #f6f6f6;
+}
+.prev-next-link a:first-child {
+  border-top: 1px #ddd solid;
+}
+.prev-next-label {
+  font-size: 0.825rem;
+  color: #000;
+  margin-bottom: 10px;
+}
+
+/* Arrows */
+.prev-link {
+  background: url(http://www.webcreatorbox.com/sample/images/arrow-prev.svg)
+    no-repeat 10px center;
+}
+.next-link {
+  background: url(http://www.webcreatorbox.com/sample/images/arrow-next.svg)
+    no-repeat right 10px center;
+}
+.prev-link,
+.next-link {
+  background-size: 16px 28px;
+}
+
+/* Larger devices */
+@media (min-width: 600px) {
+  .prev-next-link {
+    display: flex;
+  }
+  .prev-next-link a {
+    flex: 1;
+  }
+  .prev-next-link a,
+  .prev-next-link a:first-child {
+    border: none;
+  }
+  .next-link {
+    text-align: right;
+  }
+}
+
+/* Images */
+.thumb-wrap {
+  display: flex;
+}
+.thumb-wrap p {
+  margin: 0 0 0 16px;
+}
+.thumb-wrap img {
+  width: 80px;
+  height: 100%;
 }

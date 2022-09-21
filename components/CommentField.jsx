@@ -2,15 +2,14 @@ import { addComments } from "../libs/comment";
 import { useForm } from "react-hook-form"; // SubmitHandlerは、submitイベントに関する関数の型宣言に使う
 import { ErrorMessage } from "@hookform/error-message";
 import { supabase } from "../libs/supabase";
-import { useState ,useEffect} from "react";
+import { useState, useEffect } from "react";
 import styles from "../styles/Home.module.scss";
 
-export const CommentsField = ({ blogId}) => {
-
+export const CommentsField = ({ blogId }) => {
   const {
     register, //inputなどに入力された値を参照するために使う
     handleSubmit,
-    formState: { errors,},
+    formState: { errors },
   } = useForm();
 
   const [state, setState] = useState([]);
@@ -28,15 +27,16 @@ export const CommentsField = ({ blogId}) => {
     };
     comment();
   }, []);
-  
-  const sleep = waitTime => new Promise(resolve => setTimeout(resolve,waitTime))
-  
+
+  const sleep = (waitTime) =>
+    new Promise((resolve) => setTimeout(resolve, waitTime));
+
   const reloadFunc = async function () {
-      await sleep(1000)
-      window.location.reload()
-  }
+    await sleep(1000);
+    window.location.reload();
+  };
   const sendLine = async (content) => {
-    const text = `${content}`
+    const text = `${content}`;
     const response = await fetch(`/api/${text}`);
     const data = await response.json();
   };
@@ -52,24 +52,26 @@ export const CommentsField = ({ blogId}) => {
   return (
     <div>
       <div>
-        <p className="text-xl font-bold text-gray-900">コメント欄：β版</p>
-        <ul>
-          {state.map((elm) => {
-            return (
-              <li key={elm.id}>
-                <div className={styles.balloon}>
-                  <p className="whitespace-pre-line">
-                    {elm.user_name} : {elm.body}
-                  </p>
-                </div>
-              </li>
-            );
-          })}
-        </ul>
+        <p className="text-xl font-bold text-gray-900 flex justify-center pt-2">
+          コメント欄
+        </p>
+          <ul>
+            {state.map((elm) => {
+              return (
+                <li key={elm.id}>
+                  <div className={styles.balloon}>
+                    <p className="whitespace-pre-line">
+                      {elm.user_name} : {elm.body}
+                    </p>
+                  </div>
+                </li>
+              );
+            })}
+          </ul>
       </div>
       <div>
         <form
-          className="grid grid-cols-1 gap-6 m-16"
+          className="grid grid-cols-1 gap-6 m-4"
           onSubmit={handleSubmit(onSubmit)}
         >
           <div className="block">
